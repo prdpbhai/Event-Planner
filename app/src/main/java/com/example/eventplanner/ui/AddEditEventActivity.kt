@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.example.eventplanner.R
 import com.example.eventplanner.data.Event
+import com.example.eventplanner.data.EventViewModel
 import com.example.eventplanner.databinding.ActivityAddEditEventBinding
 import com.google.android.material.appbar.MaterialToolbar
 import dagger.hilt.android.AndroidEntryPoint

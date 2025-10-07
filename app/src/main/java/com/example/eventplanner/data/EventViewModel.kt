@@ -1,4 +1,4 @@
-package com.example.eventplanner.ui
+package com.example.eventplanner.data
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel

@@ -2,14 +2,13 @@ package com.example.eventplanner.ui
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.eventplanner.R
+import com.example.eventplanner.data.EventAdapter
+import com.example.eventplanner.data.EventViewModel
 import com.example.eventplanner.databinding.ActivityUpcomingEventsBinding
 import com.google.android.material.appbar.MaterialToolbar
 import dagger.hilt.android.AndroidEntryPoint

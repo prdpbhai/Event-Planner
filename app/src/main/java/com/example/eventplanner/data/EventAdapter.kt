@@ -1,4 +1,4 @@
-package com.example.eventplanner.ui
+package com.example.eventplanner.data
 
 
 import android.view.LayoutInflater
@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.eventplanner.data.Event
 import com.example.eventplanner.databinding.ItemEventBinding
 import java.text.SimpleDateFormat
 import java.util.*
