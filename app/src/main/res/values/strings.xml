@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Event Planner</string>
+    <string name="add_event">Add Event</string>
+    <string name="edit_event">Edit Event</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+</resources>

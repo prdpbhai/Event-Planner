@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/purple_500"
+        app:title="Event Planner"
+        android:paddingTop="20dp"
+        android:titleTextColor="@android:color/white"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="100dp"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tvSelectedDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select a date"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:padding="4dp" />
+
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="50dp"
+            android:paddingHorizontal="8dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </LinearLayout>
+
+    <!-- RecyclerView for events -->
+
+    <!-- Floating Action Button to add new events -->
+    <!-- Floating Action Button Menu -->
+    <LinearLayout
+        android:id="@+id/fabMenuLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:gravity="end"
+        android:visibility="visible">
+
+        <!-- Upcoming Events Button + Label -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:id="@+id/layoutUpcoming">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upcoming Events"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/label_bg"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabUpcomingEvents"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="Upcoming Events"
+                app:srcCompat="@android:drawable/ic_menu_my_calendar"
+                app:tint="@android:color/white"
+                app:backgroundTint="@color/teal_700" />
+
+        </LinearLayout>
+
+        <!-- Add Event Button + Label -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:id="@+id/layoutAddEvent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Event"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/label_bg"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabAddEvent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="Add Event"
+                app:srcCompat="@android:drawable/ic_input_add"
+                app:tint="@android:color/white"
+                app:backgroundTint="@color/sky_blue" />
+        </LinearLayout>
+
+        <!-- Main Menu Button -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Menu"
+            app:srcCompat="@android:drawable/ic_input_add"
+            app:tint="@android:color/white"
+            app:cornerRadius="100dp"
+            app:backgroundTint="@color/purple_500" />
+
+    </LinearLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
