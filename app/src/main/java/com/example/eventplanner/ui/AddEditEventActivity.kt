@@ -24,7 +24,7 @@ class AddEditEventActivity : AppCompatActivity() {
 
     private var selectedDate: Calendar = Calendar.getInstance()
     private var selectedTime: Calendar = Calendar.getInstance()
-    private var eventId: Int? = null  // If editing existing event
+    private var eventId: Int? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,7 +35,6 @@ class AddEditEventActivity : AppCompatActivity() {
         val toolbar: MaterialToolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 
-// Set title text color
         toolbar.setTitleTextColor(ContextCompat.getColor(this, android.R.color.white))
         // Check if we are editing an existing event
         eventId = intent.getIntExtra("event_id", -1).takeIf { it != -1 }
@@ -105,7 +104,6 @@ class AddEditEventActivity : AppCompatActivity() {
         }
 
 
-        // Combine date and time into one timestamp
         val calendar = Calendar.getInstance()
         calendar.set(
             selectedDate.get(Calendar.YEAR),

@@ -23,7 +23,6 @@ class EventAdapter(
             binding.tvTitle.text = event.title
             binding.tvDescription.text = event.description
 
-            // Handle date stored as string, e.g. "2025-10-07"
             val inputFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
             val outputFormat = SimpleDateFormat("dd MMM yyyy", Locale.getDefault())
 
@@ -31,7 +30,7 @@ class EventAdapter(
                 val date = inputFormat.parse(event.date)
                 outputFormat.format(date!!)
             } catch (e: Exception) {
-                event.date // fallback if parsing fails
+                event.date
             }
             binding.tvDate.text = formattedDate
 

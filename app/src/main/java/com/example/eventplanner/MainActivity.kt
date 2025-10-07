@@ -58,7 +58,6 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        // Initialize FABs
         fabMain = binding.fabMain
         fabAddEvent = binding.fabAddEvent
         fabUpcomingEvents = binding.fabUpcomingEvents
@@ -68,7 +67,7 @@ class MainActivity : AppCompatActivity() {
         setupFab()
     }
 
-    /** ---------------- RecyclerView Setup ---------------- */
+
     private fun setupRecyclerView() {
         adapter = EventAdapter(
             onEditClick = { event ->
@@ -84,14 +83,14 @@ class MainActivity : AppCompatActivity() {
         binding.recyclerView.adapter = adapter
     }
 
-    /** ---------------- Load Events for Selected Date ---------------- */
+
     private fun loadEventsForDate(dateString: String) {
         viewModel.getEventsByDate(dateString).observe(this) { events ->
             adapter.submitList(events ?: emptyList())
         }
     }
 
-    /** ---------------- FAB Menu Toggle ---------------- */
+
     private fun toggleFabMenu() {
         if (isFabMenuOpen) {
             // Hide menu options
@@ -107,7 +106,7 @@ class MainActivity : AppCompatActivity() {
         isFabMenuOpen = !isFabMenuOpen
     }
 
-    /** ---------------- FAB Actions ---------------- */
+
     private fun setupFab() {
         fabMain.setOnClickListener {
             toggleFabMenu()
@@ -126,7 +125,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    /** ---------------- Calendar Setup ---------------- */
+
     private fun setupCalendar() {
         val today = Calendar.getInstance()
         todayDate = sdf.format(today.time)
